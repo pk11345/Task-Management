@@ -31,7 +31,8 @@ const Task = ({ setSelectedTask, setIsRightOpen }) => {
                     <button onClick={(e) => { e.stopPropagation(); dispatch(toggletask(t.id)); }} className="cursor-pointer">
                       {t.completed ? <MdCheckBox className="text-green-600" /> : <MdOutlineCheckBoxOutlineBlank />}
                     </button>
-                    <h1 className={t.completed ? "line-through text-gray-500" : ""}>{t.task}</h1>
+                    <h1 className={t.completed ? "line-through text-gray-500" : ""}>{t.task}
+                       <span className="text-xs text-gray-500 italic">  (Add note)</span> </h1>
                   </div>
                   <div className="flex gap-3">
                     <button onClick={(e) => { e.stopPropagation(); dispatch(togglestar(t.id)); }} className="cursor-pointer">
